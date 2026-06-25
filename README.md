@@ -5,7 +5,7 @@ Al posto dell'iframe voglio aggiungere https://docusaurus.io/
 
 Stack:
 - Rust
-- docosaurus
+- docosaurus    
 - Notion API (notion-rs)
 
 Quello che deve fare il setup di build del sito di Notion e' questo:
