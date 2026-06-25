@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Termini di utilizzo e licenza per la consultazione degli appunti scolastici di informatica e altre materie curati da Giulio Tognetto.">
+    <title>Licenza - Appunti Giulio Tognetto</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 40px 20px;
+      }
+
+      .nav-container {
+        max-width: 800px;
+        margin: 0 auto 20px auto;
+        text-align: left;
+      }
+
+      .content-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        width: 100%;
+        text-align: center;
+      }
+
+      #license-content {
+        text-align: left;
+      }
+
+      @media (prefers-color-scheme: light) {
+        body {
+          background-color: #ffffff;
+          color: #37352f;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #191919;
+          color: #ebebeb;
+        }
+        h1 {
+          border-bottom: 1px solid #333;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-container">
+      <a href="/">Back to Home</a>
+    </div>
+    
+    <main class="content-wrapper">
+      <h1>License</h1>
+      <pre id="license-content" style="white-space: pre-wrap; word-wrap: break-word">
+        Loading license...
+      </pre>
+
+      <div id="error-message" style="display: none; text-align: center; margin-top: 20px;">
+        Error loading the license. You can download a copy here:
+        <a href="https://github.com/GitGinocchio/Appunti/blob/main/LICENSE" target="_blank">GitHub Repository</a>
+      </div>
+    </main>
+
+    <script>
+      let license_element = document.getElementById("license-content");
+      let error_element = document.getElementById("error-message");
+      fetch("https://raw.githubusercontent.com/GitGinocchio/Appunti/refs/heads/main/LICENSE")
+        .then((response) => response.text())
+        .then((text) => {
+          license_element.textContent = text;
+        })
+        .catch((err) => {
+          license_element.style.display = "none";
+          error_element.style.display = "block";
+        });
+    </script>
+  </body>
+</html>
