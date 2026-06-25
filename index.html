@@ -1,30 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        height: 100dvh; 
-        width: 100vw;
-        overflow: hidden;
-        position: fixed;
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appunti Scolastici di Giulio Tognetto | Informatica, Matematica, Storia e altro</title>
+  <meta name="description" content="Raccolta completa di appunti scolastici curata da Giulio Tognetto: Informatica, Sistemi e Reti, Matematica, TPSI, GPOI, Inglese, Storia e Italiano. Risorse per il percorso tecnico-informatico.">
+  <meta name="keywords" content="appunti scolastici, informatica, sistemi e reti, matematica, tpsi, gpoi, maturità 2026, giulio tognetto">
+  <link rel="canonical" href="https://appunti.giuliotognetto.dev/" />
+  <meta property="og:title" content="Appunti Scolastici di Giulio Tognetto | Informatica, Matematica, Storia e altro">
+  <meta property="og:description" content="Raccolta completa di appunti scolastici curata da Giulio Tognetto: Informatica, Sistemi e Reti, Matematica, TPSI, GPOI, Inglese, Storia e Italiano. Risorse per il percorso tecnico-informatico.">
+  <meta property="og:type" content="website">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100dvh; 
+      width: 100vw;
+      overflow: hidden;
+      position: fixed;
+      background-color: #ffffff;
+    }
 
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100dvh;
-        border: none;
-        display: block;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100dvh;
+      border: none;
+      display: block;
+    }
+
+    .license-popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 16px;
+      border-radius: 6px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      animation: slideIn 0.3s ease-out 1s forwards;
+      opacity: 0;
+      transition: background 0.3s, color 0.3s, border 0.3s;
+    }
+
+    @media (prefers-color-scheme: light) {
+      .license-popup {
+        background: #ffffff;
+        border: 1px solid rgba(55, 53, 47, 0.16);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+        color: rgb(55, 53, 47);
       }
-    </style>
+      .license-popup a { color: #2383e2; }
+      .license-popup button { color: rgba(55, 53, 47, 0.5); }
+      .license-popup button:hover { color: rgb(55, 53, 47); }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .license-popup {
+        background: #2f2f2f;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .license-popup a { color: #58a6ff; }
+      .license-popup button { color: rgba(255, 255, 255, 0.5); }
+      .license-popup button:hover { color: #ffffff; }
+    }
+
+    .license-popup button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 4px;
+      line-height: 1;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalResource",
+    "name": "Appunti Scolastici di Giulio Tognetto | Informatica, Matematica, Storia e altro",
+    "description": "Raccolta completa di appunti scolastici curata da Giulio Tognetto: Informatica, Sistemi e Reti, Matematica, TPSI, GPOI, Inglese, Storia e Italiano. Risorse per il percorso tecnico-informatico.",
+    "author": {
+      "@type": "Person",
+      "name": "Giulio Tognetto"
+    },
+    "educationalLevel": "High School"
+  }
+  </script>
 </head>
 <body>
+  <div id="license-popup" class="license-popup">
+    <p>Content protected by license.
+      <a href="https://github.com/GitGinocchio/Appunti/blob/main/LICENSE" target="_blank">Read the details</a>
+    </p>
+    <button onclick="document.getElementById('license-popup').style.display='none'">✕</button>
+  </div>
   <iframe
     src="https://appunti-giuliotognetto.notion.site/ebd//30c3d59ada4e807289d2cb69b5ecdfd3" 
     allowfullscreen
