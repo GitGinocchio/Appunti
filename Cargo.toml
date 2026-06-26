@@ -5,4 +5,4 @@ edition = "2024"
 
 [dependencies]
 comrak = "0.52.0"
-notion-rs = "0.1.0"
+notion = "0.6.0"
