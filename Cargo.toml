@@ -1,0 +1,12 @@
+[package]
+name = "appunti"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+comrak = "0.52.0"
+dotenvy = "0.15.7"
+envy = "0.4.2"
+notion-client = "1.1.1"
+serde = "1.0.228"
+tokio = { version = "1.52.3", features = [ "full" ] }
